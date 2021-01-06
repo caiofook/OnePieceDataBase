@@ -1,0 +1,6 @@
+app:
+  datasource:
+    jdbc-url: jdbc:postgresql://localhost:5432/opdb
+    username: postgres
+    password: oppassword
+    pool-size: 30
