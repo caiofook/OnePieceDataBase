@@ -26,11 +26,13 @@ public class PirateDataAccessService implements PirateDao{
 
     @Override
     public List<Pirate> selectAllPeople() {
-        final String sql = "SELECT id, name FROM pirate";
+        final String sql = "SELECT id, name, crew, power FROM pirate";
         return jdbcTemplate.query(sql, (resultSet, i) -> {
             UUID id = UUID.fromString(resultSet.getString("id"));
             String name = resultSet.getString("name");
-            return new Pirate(id, name);
+            String crew = resultSet.getString("crew");
+            String power = resultSet.getString("power");
+            return new Pirate(id, name, crew, power);
         });
     }
 

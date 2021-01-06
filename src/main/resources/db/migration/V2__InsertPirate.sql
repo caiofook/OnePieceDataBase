@@ -1,0 +1,1 @@
+INSERT INTO pirate (id, name) VALUES (uuid_generate_v4(), 'Monkey D. Luffy');
