@@ -24,17 +24,18 @@ public class PirateService {
         return pirateDao.insertPirate(pirate);
     }
 
+    public Optional<Pirate> getPirateById(UUID pirateId) {
+        return pirateDao.selectPirateById(pirateId);
+    }
+
     public List<Pirate> getAllPeople() {
         return pirateDao.selectAllPeople();
     }
 
-    public Optional<Pirate> getPirateById(UUID id) {
-        return pirateDao.selectPirateById(id);
-    }
     public int deletePirate(UUID id) {
         return pirateDao.deletePirateById(id);
     }
-    public int updatePirate(UUID id, Pirate newPirate) {
-        return pirateDao.updatePirateById(id, newPirate);
+    public int updatePirate(UUID id, Pirate pirateToUpdate) {
+        return pirateDao.updatePirateById(id, pirateToUpdate);
     }
 }

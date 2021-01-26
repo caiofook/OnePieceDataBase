@@ -10,17 +10,14 @@ import java.util.UUID;
 
 public interface PirateDao {
     int insertPirate(UUID id, Pirate pirate);
-
     default int insertPirate(Pirate pirate) {
         UUID id = UUID.randomUUID();
         return insertPirate(id, pirate);
     }
-
     List<Pirate> selectAllPeople();
-
     Optional<Pirate> selectPirateById(UUID id);
 
     int deletePirateById(UUID id);
 
-    int updatePirateById(UUID id, Pirate pirate);
+    int updatePirateById(UUID id, Pirate pirateToUpdate);
 }

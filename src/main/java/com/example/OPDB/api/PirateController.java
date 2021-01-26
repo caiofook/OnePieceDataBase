@@ -30,8 +30,8 @@ public class PirateController {
     }
 
     @GetMapping(path = "{id}")
-    public Pirate getPirateById(@PathVariable("id") UUID id) {
-        return pirateService.getPirateById(id)
+    public Pirate getPirateById(@PathVariable("id") UUID pirateId) {
+        return pirateService.getPirateById(pirateId)
                 .orElse(null);
     }
 

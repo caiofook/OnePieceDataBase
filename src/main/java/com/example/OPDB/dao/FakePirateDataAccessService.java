@@ -1,4 +1,4 @@
-package com.example.OPDB.dao;
+/*package com.example.OPDB.dao;
 
 import com.example.OPDB.model.Pirate;
 import org.springframework.stereotype.Repository;
@@ -15,9 +15,10 @@ public class FakePirateDataAccessService implements PirateDao {
 
     @Override
     public int insertPirate(UUID id, Pirate pirate) {
-        DB.add(new Pirate(id, pirate.getName()));
+        DB.add(new Pirate(id, pirate.getName(), pirate.getEpithet(), pirate.getCrew(), pirate.getPower()));
         return 1;
-    }
+    }  COMO ESSE MÉTODO pirate.getNmae() pode funfar se ainda não existe pirata? Eu to adicionando o pirata
+       E DANDO O NOME DELE DO PRÓPRIO NOME DELE?
 
     @Override
     public List<Pirate> selectAllPeople() {
@@ -47,7 +48,7 @@ public class FakePirateDataAccessService implements PirateDao {
                 .map(pirate -> {
                     int indexOfPirateToUpdate = DB.indexOf(pirate);
                     if (indexOfPirateToUpdate >= 0) {
-                        DB.set(indexOfPirateToUpdate, new Pirate(id, update.getName()));
+                        DB.set(indexOfPirateToUpdate, new Pirate(id, update.getName(), pirate.getEpithet(), pirate.getCrew(), pirate.getPower()));
                         return 1;
                     }
                     return 0;
@@ -55,3 +56,5 @@ public class FakePirateDataAccessService implements PirateDao {
                 .orElse(0);
     }
 }
+
+ */
